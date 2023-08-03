@@ -1,39 +1,51 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Common buttons and clock widgets for LalaLoop Kiosk Design.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+add font 'SUIT' in project pubspec.yaml
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+//To set fontFamily, add font files to pubspec.yaml and call this methods before runApp();
+//default fontFamily is SUIT
+  LalaBtnStyle.setFontfamily('GamjaFlower');
+  await DirHelper.init(machineId: 'machineId', folderName: 'lala_ui_test');
+
+  runApp(const MyApp());
+}
+
+
+Clock(color:Colors.black)
+//optional : fontSize, fontWeight
+
+SquareButton(
+    label:'CONFIRM',
+    onPressed:(){},
+)
+//optional : width, height, forLight, fontSize
+
+OutlineStadiumButton(
+    label:'CANCEL',
+    onPressed:(){},
+)
+//optional : width, height, fontSize
+
+StadiumButton(
+    label:'Isaac',
+    onPressed:(){},
+)
+//optional : width, height, fontSize
+
+DualButtonBar(
+    leftLabel: 'Lala',
+    rightLabel: 'Loop',
+    leftFunction: (){},
+    rightFunction: (){},
+)
+//optional : buttonWidth, buttonHeight, fontSize
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
