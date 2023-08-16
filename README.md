@@ -41,6 +41,17 @@ StadiumButton(
 )
 //optional : width, height, fontSize
 
+FakeStadiumButton(
+    label:'FakeButton',
+)
+//optional : width, height, fontSize
+
+RoundedOutlinedButton(
+    Child:Text('Widget required'),
+    onPressed:(){},
+)
+//optional : width, height
+
 DualButtonBar(
     leftLabel: 'Lala',
     rightLabel: 'Loop',
@@ -48,4 +59,17 @@ DualButtonBar(
     rightFunction: (){},
 )
 //optional : buttonWidth, buttonHeight, fontSize
+
+AlertToast('Toast Message')
+HeaderText('Header')
+DialogHeaderText('Dialog Header')
+DialogSubHeaderText('Dialog Sub Header')
+
+OffCofirmDialog(
+  forApp : true, // false to turn off PC
+  cancelFn:(){},
+  confirmFn:(){},
+)
+Loader()
+
 ```
