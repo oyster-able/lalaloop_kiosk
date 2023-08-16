@@ -14,6 +14,18 @@ class HeaderText extends StatelessWidget {
   }
 }
 
+class SubHeaderText extends StatelessWidget {
+  const SubHeaderText(this.label, {super.key});
+  final String label;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      label,
+      style: LalaCommonStyle.subHeader,
+    );
+  }
+}
+
 class DialogHeaderText extends StatelessWidget {
   const DialogHeaderText(this.label, {super.key});
   final String label;

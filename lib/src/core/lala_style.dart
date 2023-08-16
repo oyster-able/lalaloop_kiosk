@@ -20,6 +20,13 @@ class LalaCommonStyle {
     fontWeight: FontWeight.w700,
     height: 1.5,
   );
+  static TextStyle subHeader = TextStyle(
+    color: _sFadeNavy,
+    fontSize: 30,
+    fontFamily: LalaBtnStyle.fontFamily,
+    fontWeight: FontWeight.w700,
+    height: 1.5,
+  );
   static TextStyle dialogHeader = TextStyle(
     color: _sNavy,
     fontSize: 50,
