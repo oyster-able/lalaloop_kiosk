@@ -30,7 +30,7 @@ void main() {
         (WidgetTester tester) async {
           int count = 0;
           const String label = '취소';
-          Widget outlineStadiumBtn = OutlinedStadiumButton(
+          Widget outlineStadiumBtn = StadiumOutlinedButton(
             onPressed: () => count += 2,
             label: label,
           );
