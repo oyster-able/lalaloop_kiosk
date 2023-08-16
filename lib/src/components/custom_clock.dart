@@ -7,12 +7,12 @@ class Clock extends StatelessWidget {
   const Clock({
     this.fontSize = 28,
     this.fontWeight = FontWeight.w500,
-    required this.color,
+    this.color,
     super.key,
   });
   final double fontSize;
   final FontWeight fontWeight;
-  final Color color;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class Clock extends StatelessWidget {
                 fontFamily: LalaBtnStyle.fontFamily,
                 fontSize: fontSize,
                 fontWeight: fontWeight,
-                color: color,
+                color: color ?? LalaCommonStyle.navy,
               ),
             ),
           ],

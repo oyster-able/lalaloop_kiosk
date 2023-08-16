@@ -2,7 +2,48 @@ import 'package:flutter/material.dart';
 
 const Color _sMint = Color(0xff00C4B3);
 const Color _sNavy = Color(0xff071E3F);
+const Color _sFadeNavy = Color(0xFF3F5574);
 const Color _sWhite = Colors.white;
+const Color _sGray = Color(0xFFC4C4C4);
+
+class LalaCommonStyle {
+  LalaCommonStyle._();
+  static Color get white => _sWhite;
+  static Color get navy => _sNavy;
+  static Color get mint => _sMint;
+  static Color get gray => _sGray;
+
+  static TextStyle header = TextStyle(
+    color: _sNavy,
+    fontSize: 48,
+    fontFamily: LalaBtnStyle.fontFamily,
+    fontWeight: FontWeight.w700,
+    height: 1.5,
+  );
+  static TextStyle dialogHeader = TextStyle(
+    color: _sNavy,
+    fontSize: 50,
+    fontFamily: LalaBtnStyle.fontFamily,
+    fontWeight: FontWeight.w700,
+    decoration: TextDecoration.none,
+    height: 1.5,
+  );
+  static TextStyle dialogSubHeader = TextStyle(
+    color: _sFadeNavy,
+    fontSize: 40,
+    fontFamily: LalaBtnStyle.fontFamily,
+    fontWeight: FontWeight.w700,
+    decoration: TextDecoration.none,
+    height: 1.5,
+  );
+  static TextStyle alert = TextStyle(
+    color: _sWhite,
+    fontSize: 36,
+    fontWeight: FontWeight.w500,
+    fontFamily: LalaBtnStyle.fontFamily,
+    height: 0.97,
+  );
+}
 
 class LalaBtnStyle {
   LalaBtnStyle._();
@@ -54,7 +95,7 @@ class LalaBtnStyle {
     );
   }
 
-  static ButtonStyle outlinedRoundedButton(
+  static ButtonStyle stadiumoutlinedButton(
       {required double width, required double height}) {
     return ButtonStyle(
       fixedSize: MaterialStateProperty.all<Size>(Size(width, height)),
@@ -89,6 +130,26 @@ class LalaBtnStyle {
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           const RoundedRectangleBorder(borderRadius: BorderRadius.zero)),
       tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+    );
+  }
+
+  static ButtonStyle roundedOutlinedButton({
+    required double width,
+    required double height,
+  }) {
+    return ButtonStyle(
+      fixedSize: MaterialStateProperty.all<Size>(Size(width, height)),
+      backgroundColor: MaterialStateProperty.all<Color>(_sWhite),
+      overlayColor: MaterialStateProperty.all<Color>(Colors.transparent),
+      elevation: MaterialStateProperty.all<double>(3),
+      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))),
+      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+      side: _setButtonBorder(
+        original: _sGray,
+        pressed: _sMint,
+        width: 4,
+      ),
     );
   }
 }

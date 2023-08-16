@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../core/lala_style.dart';
 
-class OutlinedStadiumButton extends StatelessWidget {
-  const OutlinedStadiumButton({
+class StadiumOutlinedButton extends StatelessWidget {
+  const StadiumOutlinedButton({
     required this.label,
     required this.onPressed,
     this.width = 340,
@@ -20,7 +20,7 @@ class OutlinedStadiumButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
-      style: LalaBtnStyle.outlinedRoundedButton(
+      style: LalaBtnStyle.stadiumoutlinedButton(
         width: width,
         height: height,
       ),

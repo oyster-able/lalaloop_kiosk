@@ -29,7 +29,7 @@ SquareButton(
 )
 //optional : width, height, forLight, fontSize
 
-OutlineStadiumButton(
+StadiumOutlinedButton(
     label:'CANCEL',
     onPressed:(){},
 )
