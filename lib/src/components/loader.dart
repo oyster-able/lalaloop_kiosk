@@ -20,7 +20,7 @@ class Loader extends StatelessWidget {
           Image(
             image: AssetImage(
               'lib/src/assets/loader.gif',
-              package: 'lala_ui',
+              package: 'lalaloop_kiosk',
             ),
           ),
         ],
