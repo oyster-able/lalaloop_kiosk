@@ -30,7 +30,7 @@ class OffCofirmDialog extends StatelessWidget {
                   forApp
                       ? 'lib/src/assets/app_off.png'
                       : 'lib/src/assets/pc_off.png',
-                  package: 'lala_ui',
+                  package: 'lalaloop_kiosk',
                 ),
                 height: 230,
               ),

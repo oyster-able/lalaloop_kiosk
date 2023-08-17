@@ -19,7 +19,8 @@ class AlertToast extends StatelessWidget {
         child: Row(
           children: [
             const Image(
-              image: AssetImage('lib/src/assets/alert.png', package: 'lala_ui'),
+              image: AssetImage('lib/src/assets/alert.png',
+                  package: 'lalaloop_kiosk'),
               height: 34,
             ),
             const SizedBox(width: 15),
