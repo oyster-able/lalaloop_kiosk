@@ -48,6 +48,7 @@ class LalaCommonStyle {
     fontSize: 36,
     fontWeight: FontWeight.w500,
     fontFamily: LalaBtnStyle.fontFamily,
+    decoration: TextDecoration.none,
     height: 0.97,
   );
 }
