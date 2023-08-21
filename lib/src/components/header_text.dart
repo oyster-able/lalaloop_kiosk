@@ -10,6 +10,7 @@ class HeaderText extends StatelessWidget {
     return Text(
       label,
       style: LalaCommonStyle.header,
+      textAlign: TextAlign.center,
     );
   }
 }
@@ -22,6 +23,7 @@ class SubHeaderText extends StatelessWidget {
     return Text(
       label,
       style: LalaCommonStyle.subHeader,
+      textAlign: TextAlign.center,
     );
   }
 }
@@ -34,6 +36,7 @@ class DialogHeaderText extends StatelessWidget {
     return Text(
       label,
       style: LalaCommonStyle.dialogHeader,
+      textAlign: TextAlign.center,
     );
   }
 }
@@ -46,6 +49,7 @@ class DialogSubHeaderText extends StatelessWidget {
     return Text(
       label,
       style: LalaCommonStyle.dialogSubHeader,
+      textAlign: TextAlign.center,
     );
   }
 }
