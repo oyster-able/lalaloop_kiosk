@@ -4,6 +4,7 @@ export 'src/components/square_button.dart';
 export 'src/components/dual_button_bar.dart';
 export 'src/components/outline_stadium_button.dart';
 export 'src/components/stadium_button.dart';
+export 'src/components/dual_stadium_bar.dart';
 export 'src/components/disabled_stadium_button.dart';
 export 'src/components/rounded_outlined_button.dart';
 export 'src/components/header_text.dart';
