@@ -8,6 +8,7 @@ enum LogLevel {
   api,
   pcb,
   bcd,
+  pay,
   ntw;
 
   @override
