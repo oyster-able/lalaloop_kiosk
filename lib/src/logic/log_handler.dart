@@ -9,6 +9,7 @@ enum LogLevel {
   pcb,
   bcd,
   pay,
+  cam,
   ntw;
 
   @override

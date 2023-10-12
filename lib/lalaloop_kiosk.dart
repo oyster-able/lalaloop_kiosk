@@ -15,3 +15,4 @@ export 'src/components/off_confirm_dialog.dart';
 export 'src/core/lala_style.dart';
 export 'src/logic/dir_helper.dart';
 export 'src/logic/log_handler.dart';
+export 'src/logic/full_screen.dart';
