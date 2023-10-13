@@ -26,6 +26,8 @@ class DirHelper {
         p.join(_appLogDir, '${_machineId}_${DateTime.now().forTitle()}.log');
     _functionForNewDay = fn;
     LogController.init();
+    _deleteStaleLogFile();
+    if (fn != null) fn();
   }
 
   static Future<void> setUpForNewDay() async {
