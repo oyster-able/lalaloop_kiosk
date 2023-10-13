@@ -20,7 +20,7 @@ class Clock extends StatelessWidget {
       stream: Stream.periodic(const Duration(minutes: 1)),
       builder: (context, snapshot) {
         final DateTime now = DateTime.now();
-        if (now.toString().contains('23:59')) DirHelper.updateLogFile();
+        if (now.toString().contains('23:59')) DirHelper.setUpForNewDay();
         List<String> time = now.forClock();
         return Column(
           children: [

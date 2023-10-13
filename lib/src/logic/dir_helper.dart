@@ -8,10 +8,14 @@ class DirHelper {
   static String _machineId = '';
   static String _appLogDir = '';
   static String _appLogFile = '';
+  static void Function()? _functionForNewDay;
   DirHelper._();
 
-  static Future<void> init(
-      {required String machineId, required String folderName}) async {
+  static Future<void> init({
+    required String machineId,
+    required String folderName,
+    void Function()? fn,
+  }) async {
     final String originPath = (await getApplicationDocumentsDirectory()).path;
     _machineId = machineId;
     _appLogDir = p.join(originPath, folderName);
@@ -20,8 +24,14 @@ class DirHelper {
     }
     _appLogFile =
         p.join(_appLogDir, '${_machineId}_${DateTime.now().forTitle()}.log');
+    _functionForNewDay = fn;
     LogController.init();
+  }
+
+  static Future<void> setUpForNewDay() async {
+    _updateLogFile();
     _deleteStaleLogFile();
+    if (_functionForNewDay != null) _functionForNewDay!();
   }
 
   static Future<void> _deleteStaleLogFile() async {
@@ -41,7 +51,7 @@ class DirHelper {
     }
   }
 
-  static Future<void> updateLogFile() async {
+  static Future<void> _updateLogFile() async {
     if (_appLogDir.isEmpty) return;
     await LogController.writeLog(
       level: LogLevel.inf,
