@@ -15,7 +15,7 @@ void main() async {
   //default fontFamily is SUIT
   LalaBtnStyle.setFontfamily('GamjaFlower');
 
-  //this wil create directory of '${folderName}' at Documents directory
+  //this will create directory of '${folderName}' at Documents directory
   //'${_machineId}_YYYY-MM-DD.log' file will be created under the directory
   await DirHelper.init(machineId: 'machineId', folderName: 'lala_ui_test');
 

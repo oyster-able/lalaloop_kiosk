@@ -72,6 +72,21 @@ class DirHelper {
     );
   }
 
+  static Future<void> copyConfigFile() async {
+    final String dirPath = (await getApplicationSupportDirectory()).path;
+    final File originConfig = File(p.join(dirPath, 'shared_preferences.json'));
+    final String newCopy = p.join(dirPath, 'shared_preferences_copy.json');
+    try {
+      originConfig.copy(newCopy);
+    } catch (e) {
+      LogController.writeLog(
+        level: LogLevel.inf,
+        tag: LogTag.err,
+        msg: 'FAILED TO COPY CONFIG FILE $e',
+      );
+    }
+  }
+
   static String get machineId => _machineId;
   static String get appLogDir => _appLogDir;
   static String get appLogFile => _appLogFile;
